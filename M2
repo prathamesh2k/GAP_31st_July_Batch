@@ -1,1 +1,2 @@
 This is the first line of M2 file
+This is the second line of M2 file
