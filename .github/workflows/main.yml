@@ -1,7 +1,7 @@
 name: first workflow
 
 
-on: [push, issues, pull_request, fork]
+on: [push, issues, pull_request, fork, pull_request_review]
 
 jobs: 
   build:
