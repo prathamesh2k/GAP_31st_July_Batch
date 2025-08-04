@@ -3,7 +3,7 @@ name: first workflow
 
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: '03 14 * * *'
 
 jobs: 
   build:
