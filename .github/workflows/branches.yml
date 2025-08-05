@@ -4,7 +4,7 @@ name: filters workflow
 on:
   push:
     branches:
-      - master
+      - main
   
     
 jobs: 
