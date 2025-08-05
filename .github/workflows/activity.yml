@@ -1,8 +1,10 @@
-name: first workflow
+name: activity workflow
 
 
-on: [push, issues, pull_request, pull_request_review]
-
+on:
+  pull_request:
+    types: [opened, synchronize, closed]
+    
 
 jobs: 
   build:
@@ -17,7 +19,6 @@ jobs:
         run: echo 'test chrome'
       - name: Print test - edge
         run: echo 'test edge'
-
 
   deploy:
     runs-on: ubuntu-latest
