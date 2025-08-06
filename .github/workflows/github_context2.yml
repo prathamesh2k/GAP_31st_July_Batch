@@ -1,0 +1,11 @@
+name: GitHub Context 02
+
+
+on:
+ [push, pull_request]
+jobs:
+ push_check:
+  if: ${{ github.event == 'push' }}
+  runs-on: ubuntu-latest
+  steps:
+   - run: echo "$GITHUB_WORKFLOW triggered on $GITHUB_EVENT event"
