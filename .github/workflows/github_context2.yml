@@ -8,4 +8,4 @@ jobs:
   if: ${{ github.event_name == 'push' }}
   runs-on: ubuntu-latest
   steps:
-   - run: echo "$GITHUB_WORKFLOW triggered on $GITHUB_EVENT event"
+   - run: echo "$GITHUB_WORKFLOW triggered on $GITHUB_EVENT_NAME event"
