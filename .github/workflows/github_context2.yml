@@ -5,7 +5,7 @@ on:
  [push, pull_request]
 jobs:
  push_check:
-  if: ${{ github.event == 'push' }}
+  if: ${{ github.event_name == 'push' }}
   runs-on: ubuntu-latest
   steps:
    - run: echo "$GITHUB_WORKFLOW triggered on $GITHUB_EVENT event"
