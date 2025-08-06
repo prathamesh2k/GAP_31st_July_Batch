@@ -24,3 +24,8 @@ jobs:
       run: echo 'deploy'
    -  if: github.event_name == 'pull_request'
       run: echo 'trigger the workflow'
+ branch_check:
+  if: ${{ github.ref == 'refs/heads/main' }}
+  runs-on: ubuntu-latest
+  steps:
+   - run: echo "Deploying to production server on branch $GITHUB_REF"
