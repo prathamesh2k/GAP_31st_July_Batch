@@ -26,6 +26,6 @@ jobs:
   debug:
     needs: [build, deploy]
     runs-on: ubuntu-latest
-    if: ${{ failure() }}
+    if: ${{ success() }}
     steps:
       - run: echo "Failed to build and deploy"
