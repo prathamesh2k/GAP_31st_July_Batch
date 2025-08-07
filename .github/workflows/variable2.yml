@@ -12,6 +12,6 @@ jobs:
   steps:
   - name: Print
     run: |
-     echo ' ${{ format('Hello {0} {1}', ${{env.MY_VAR}}, ${{vars.MY_VAR}}) }} '
+     echo 'format('Hello {0} {1} {2}', 'Mona', 'the', 'Octocat')'
     env:
      MY_VAR: steps
