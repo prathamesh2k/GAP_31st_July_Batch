@@ -12,6 +12,6 @@ jobs:
   steps:
   - name: Print
     run: |
-     echo '${{ format('Hello Env Variable - {0} and Global Variable {1}', ${{env.MY_VAR}}, ${{vars.MY_VAR}}) }}'
+     echo '${{ format('Hello Env Variable - {0} and Global Variable {1}', '${{env.MY_VAR}}') }}'
     env:
      MY_VAR: steps
