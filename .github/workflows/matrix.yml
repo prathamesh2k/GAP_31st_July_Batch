@@ -6,7 +6,7 @@ jobs:
  matrix-jobs:
   runs-on: ${{matrix.os}}
   strategy:
-    fail-fast: false
+    fail-fast: true
     max-parallel: 1
     matrix:
      include:
@@ -17,7 +17,7 @@ jobs:
      - index: 1
        total: 4
        os:  ubuntu-latest
-       java: 21
+       java: 20
      - index: 2
        total: 4
        os: windows-latest
