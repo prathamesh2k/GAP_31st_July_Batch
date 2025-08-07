@@ -12,7 +12,7 @@ jobs:
   steps:
   - name: Print
     run: |
-     echo ' ${{secrets.PASSWORD}}'
+     echo ' ${{secrets.GITHUB_TOKEN}}'
     env:
      MY_VAR: steps
      run: echo '${{env.MY_VAR}}'
