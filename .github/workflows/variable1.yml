@@ -12,7 +12,7 @@ jobs:
   steps:
   - name: Print
     run: |
-     echo 'Inside Print ${{secrets.GITHUB_TOKEN}}'
+     echo 'Inside Print ${{secrets.NEW_TOKEN}}'
      echo 'Inside Print ${{secrets}}'
      echo 'Inside Print ${{env.MY_VAR}}'
     env:
