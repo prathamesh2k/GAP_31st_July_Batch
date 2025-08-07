@@ -5,6 +5,7 @@ jobs:
   build:
     name: ${{matrix.os}}-${{matrix.node}}
     strategy:
+      fail-fast: false
       matrix:
        node: [14,12,16]
        os:
