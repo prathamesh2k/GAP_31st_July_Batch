@@ -2,7 +2,7 @@ name: GitHub Context
 
 
 on:
- workflow_dispatch
+ [workflow_dispatch, push, pull_request]
 jobs:
  github_context:
   runs-on: ubuntu-latest
@@ -22,7 +22,7 @@ jobs:
    -  name: Examples
       if: github.ref ==  'refs/heads/master'
       run: echo 'deploy'
-   -  if: github.event_name == 'pull_request'
+   -  if: github.event_name == 'workflow_dispatch'
       run: echo 'trigger the workflow'
  branch_check:
   if: ${{ github.ref == 'refs/heads/main' }}
