@@ -8,11 +8,10 @@ jobs:
  variables:
   env:
    MY_VAR: jobs
-   new: ${{ format('Hello {0} {1}', ${{env.MY_VAR}}, ${{vars.MY_VAR}}) }}
   runs-on: ubuntu-latest
   steps:
   - name: Print
     run: |
-     echo '${{env.new}}'
+     echo ' ${{ format('Hello {0} {1}', ${{env.MY_VAR}}, ${{vars.MY_VAR}}) }} '
     env:
      MY_VAR: steps
