@@ -25,7 +25,7 @@ jobs:
    -  if: github.event_name == 'workflow_dispatch'
       run: echo 'trigger the workflow'
  branch_check:
-  if: ${{ github.ref == 'refs/heads/main' }}
   runs-on: ubuntu-latest
+  if: ${{ github.ref == 'refs/heads/main' }}
   steps:
    - run: echo "Deploying to production server on branch $GITHUB_REF"
