@@ -1,4 +1,4 @@
-name: Env Variable 1
+name: Vars Variable 1
 
 on:
  workflow_dispatch
