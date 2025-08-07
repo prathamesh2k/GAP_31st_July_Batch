@@ -6,6 +6,7 @@ jobs:
     name: ${{matrix.os}}-${{matrix.node}}
     strategy:
       fail-fast: false
+      max-parallel: 2
       matrix:
        node: [14,12,16]
        os:
