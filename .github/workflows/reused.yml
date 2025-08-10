@@ -7,15 +7,15 @@ on:
       build_id:
         required: true
         type: number
-        default: 100
+        #default: 100
       deploy_target:
         required: true
         type: string
-        default: 'dev'
+        #default: 'dev'
       perform_deploy:
         required: true
         type: boolean
-        default: true
+        #default: true
 
 jobs:
   deploy:
