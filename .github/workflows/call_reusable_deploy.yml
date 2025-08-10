@@ -9,4 +9,4 @@ jobs:
   with:
     build_id: 1000
     deploy_target: 'UAT'
-    perform_deploy: false
+    perform_deploy: true
