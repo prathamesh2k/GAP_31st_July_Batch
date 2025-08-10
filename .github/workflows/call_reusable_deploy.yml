@@ -6,3 +6,7 @@ on:
 jobs:
  call-reusable:
   uses: ./.github/workflows/reused.yml
+  with:
+    build_id: 1000
+    deploy_target: 'UAT'
+    perform_deploy: false
