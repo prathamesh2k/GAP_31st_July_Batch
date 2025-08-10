@@ -1,7 +1,7 @@
 name: Call Reusable Deploy Workflow
 
 on:
-  [workflow_dispatch]
+  workflow_dispatch
 
 jobs:
  call-reusable:
