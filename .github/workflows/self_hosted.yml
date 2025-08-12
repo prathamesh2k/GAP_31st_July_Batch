@@ -1,0 +1,29 @@
+name: Self Hosted Workflow
+
+
+on:  
+ workflow_dispatch
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps: 
+      - name: Print build
+        run:  echo 'tag ${{github.ref_name}}' 
+  test:
+    needs: build
+    runs-on: self-hosted
+    steps: 
+     - name: Print test - chrome 
+       run: echo 'test chrome'
+     - name: Print test - edge
+       run: echo 'test edge'
+
+  deploy:
+    needs: [build , test]
+    runs-on: self-hosted
+    steps:
+     - name: Print deploy
+       run: echo 'deploy'
+
+ 
